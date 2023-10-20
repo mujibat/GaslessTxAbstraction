@@ -52,6 +52,7 @@ async function callIncrement() {
     console.log('theContract2:', theContract);
 
     const txOptions = {gasPrice: await provider.getGasPrice()}
+    // const transaction = await theContract.increment()
     const transaction = await theContract.increment(txOptions)
     const hash = transaction.hash
     console.log(`Transaction ${hash} sent`)
@@ -33922,12 +33923,12 @@ module.exports={
     }
   ],
   "bytecode": {
-    "object": "0x608060405234801561001057600080fd5b5061017c806100206000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c80632113522a1461005c5780633fb5c1cb1461008c5780638381f58a146100b3578063880b36e7146100ca578063d09de08a146100db575b600080fd5b60015461006f906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b6100b161009a366004610106565b600180546001600160a01b03191633179055600055565b005b6100bc60005481565b604051908152602001610083565b6001546001600160a01b031661006f565b6100b1600180546001600160a01b031916331790556000805490806100ff8361011f565b9190505550565b60006020828403121561011857600080fd5b5035919050565b60006001820161013f57634e487b7160e01b600052601160045260246000fd5b506001019056fea2646970667358221220061474c7f24170f9fba0f9f6b6635a9444cf302205516233fcb7e244b2f103f764736f6c63430008150033",
+    "object": "0x608060405234801561001057600080fd5b5061017c806100206000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c80632113522a1461005c5780633fb5c1cb1461008c5780638381f58a146100b3578063880b36e7146100ca578063d09de08a146100db575b600080fd5b60015461006f906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b6100b161009a366004610106565b600180546001600160a01b03191633179055600055565b005b6100bc60005481565b604051908152602001610083565b6001546001600160a01b031661006f565b6100b1600180546001600160a01b031916331790556000805490806100ff8361011f565b9190505550565b60006020828403121561011857600080fd5b5035919050565b60006001820161013f57634e487b7160e01b600052601160045260246000fd5b506001019056fea2646970667358221220fef69e9bf8ca50a773d407a6ec92ef413bf46c78e606244bb1236c02f712ea5464736f6c63430008130033",
     "sourceMap": "65:382:20:-:0;;;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
-    "object": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c80632113522a1461005c5780633fb5c1cb1461008c5780638381f58a146100b3578063880b36e7146100ca578063d09de08a146100db575b600080fd5b60015461006f906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b6100b161009a366004610106565b600180546001600160a01b03191633179055600055565b005b6100bc60005481565b604051908152602001610083565b6001546001600160a01b031661006f565b6100b1600180546001600160a01b031916331790556000805490806100ff8361011f565b9190505550565b60006020828403121561011857600080fd5b5035919050565b60006001820161013f57634e487b7160e01b600052601160045260246000fd5b506001019056fea2646970667358221220061474c7f24170f9fba0f9f6b6635a9444cf302205516233fcb7e244b2f103f764736f6c63430008150033",
+    "object": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c80632113522a1461005c5780633fb5c1cb1461008c5780638381f58a146100b3578063880b36e7146100ca578063d09de08a146100db575b600080fd5b60015461006f906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b6100b161009a366004610106565b600180546001600160a01b03191633179055600055565b005b6100bc60005481565b604051908152602001610083565b6001546001600160a01b031661006f565b6100b1600180546001600160a01b031916331790556000805490806100ff8361011f565b9190505550565b60006020828403121561011857600080fd5b5035919050565b60006001820161013f57634e487b7160e01b600052601160045260246000fd5b506001019056fea2646970667358221220fef69e9bf8ca50a773d407a6ec92ef413bf46c78e606244bb1236c02f712ea5464736f6c63430008130033",
     "sourceMap": "65:382:20:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;115:25;;;;;-1:-1:-1;;;;;115:25:20;;;;;;-1:-1:-1;;;;;178:32:22;;;160:51;;148:2;133:18;115:25:20;;;;;;;;147:113;;;;;;:::i;:::-;202:10;:23;;-1:-1:-1;;;;;;202:23:20;215:10;202:23;;;:10;235:18;147:113;;;88:21;;;;;;;;;553:25:22;;;541:2;526:18;88:21:20;407:177:22;357:88:20;428:10;;-1:-1:-1;;;;;428:10:20;357:88;;266:86;;303:10;:23;;-1:-1:-1;;;;;;303:23:20;316:10;303:23;;;:10;337:8;;;303:10;337:8;;;:::i;:::-;;;;;;266:86::o;222:180:22:-;281:6;334:2;322:9;313:7;309:23;305:32;302:52;;;350:1;347;340:12;302:52;-1:-1:-1;373:23:22;;222:180;-1:-1:-1;222:180:22:o;589:232::-;628:3;649:17;;;646:140;;708:10;703:3;699:20;696:1;689:31;743:4;740:1;733:15;771:4;768:1;761:15;646:140;-1:-1:-1;813:1:22;802:13;;589:232::o",
     "linkReferences": {}
   },
@@ -33938,10 +33939,10 @@ module.exports={
     "number()": "8381f58a",
     "setNumber(uint256)": "3fb5c1cb"
   },
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getLastCaller\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"increment\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"lastCaller\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"number\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newNumber\",\"type\":\"uint256\"}],\"name\":\"setNumber\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/Counter.sol\":\"Counter\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"src/Counter.sol\":{\"keccak256\":\"0x41bf571ddcb954aa0fa4402d0d26ad66d1c1bd38d881e7efb09af6e82cc5b4f5\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://373ce9286675868c683d2d74ab0be8894c1a7f572075fdc3d6d183b26000df7f\",\"dweb:/ipfs/QmSTZGKsvB2GSVWRZDHTrUodkNnCg4JfEfU25ZPJjWhFg6\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getLastCaller\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"increment\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"lastCaller\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"number\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newNumber\",\"type\":\"uint256\"}],\"name\":\"setNumber\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/Counter.sol\":\"Counter\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"src/Counter.sol\":{\"keccak256\":\"0x41bf571ddcb954aa0fa4402d0d26ad66d1c1bd38d881e7efb09af6e82cc5b4f5\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://373ce9286675868c683d2d74ab0be8894c1a7f572075fdc3d6d183b26000df7f\",\"dweb:/ipfs/QmSTZGKsvB2GSVWRZDHTrUodkNnCg4JfEfU25ZPJjWhFg6\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
-      "version": "0.8.21+commit.d9974bed"
+      "version": "0.8.19+commit.7dd6d404"
     },
     "language": "Solidity",
     "output": {
@@ -34046,17 +34047,17 @@ module.exports={
   },
   "ast": {
     "absolutePath": "src/Counter.sol",
-    "id": 43451,
+    "id": 43473,
     "exportedSymbols": {
       "Counter": [
-        43450
+        43472
       ]
     },
     "nodeType": "SourceUnit",
     "src": "39:409:20",
     "nodes": [
       {
-        "id": 43410,
+        "id": 43432,
         "nodeType": "PragmaDirective",
         "src": "39:24:20",
         "nodes": [],
@@ -34068,12 +34069,12 @@ module.exports={
         ]
       },
       {
-        "id": 43450,
+        "id": 43472,
         "nodeType": "ContractDefinition",
         "src": "65:382:20",
         "nodes": [
           {
-            "id": 43412,
+            "id": 43434,
             "nodeType": "VariableDeclaration",
             "src": "88:21:20",
             "nodes": [],
@@ -34082,7 +34083,7 @@ module.exports={
             "mutability": "mutable",
             "name": "number",
             "nameLocation": "103:6:20",
-            "scope": 43450,
+            "scope": 43472,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -34090,7 +34091,7 @@ module.exports={
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 43411,
+              "id": 43433,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "88:7:20",
@@ -34102,7 +34103,7 @@ module.exports={
             "visibility": "public"
           },
           {
-            "id": 43414,
+            "id": 43436,
             "nodeType": "VariableDeclaration",
             "src": "115:25:20",
             "nodes": [],
@@ -34111,7 +34112,7 @@ module.exports={
             "mutability": "mutable",
             "name": "lastCaller",
             "nameLocation": "130:10:20",
-            "scope": 43450,
+            "scope": 43472,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -34119,7 +34120,7 @@ module.exports={
               "typeString": "address"
             },
             "typeName": {
-              "id": 43413,
+              "id": 43435,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "115:7:20",
@@ -34132,29 +34133,29 @@ module.exports={
             "visibility": "public"
           },
           {
-            "id": 43429,
+            "id": 43451,
             "nodeType": "FunctionDefinition",
             "src": "147:113:20",
             "nodes": [],
             "body": {
-              "id": 43428,
+              "id": 43450,
               "nodeType": "Block",
               "src": "192:68:20",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
-                    "id": 43422,
+                    "id": 43444,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 43419,
+                      "id": 43441,
                       "name": "lastCaller",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 43414,
+                      "referencedDeclaration": 43436,
                       "src": "202:10:20",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -34165,7 +34166,7 @@ module.exports={
                     "operator": "=",
                     "rightHandSide": {
                       "expression": {
-                        "id": 43420,
+                        "id": 43442,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -34176,7 +34177,7 @@ module.exports={
                           "typeString": "msg"
                         }
                       },
-                      "id": 43421,
+                      "id": 43443,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -34196,23 +34197,23 @@ module.exports={
                       "typeString": "address"
                     }
                   },
-                  "id": 43423,
+                  "id": 43445,
                   "nodeType": "ExpressionStatement",
                   "src": "202:23:20"
                 },
                 {
                   "expression": {
-                    "id": 43426,
+                    "id": 43448,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 43424,
+                      "id": 43446,
                       "name": "number",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 43412,
+                      "referencedDeclaration": 43434,
                       "src": "235:6:20",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -34222,11 +34223,11 @@ module.exports={
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 43425,
+                      "id": 43447,
                       "name": "newNumber",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 43416,
+                      "referencedDeclaration": 43438,
                       "src": "244:9:20",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -34239,7 +34240,7 @@ module.exports={
                       "typeString": "uint256"
                     }
                   },
-                  "id": 43427,
+                  "id": 43449,
                   "nodeType": "ExpressionStatement",
                   "src": "235:18:20"
                 }
@@ -34252,17 +34253,17 @@ module.exports={
             "name": "setNumber",
             "nameLocation": "156:9:20",
             "parameters": {
-              "id": 43417,
+              "id": 43439,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 43416,
+                  "id": 43438,
                   "mutability": "mutable",
                   "name": "newNumber",
                   "nameLocation": "174:9:20",
                   "nodeType": "VariableDeclaration",
-                  "scope": 43429,
+                  "scope": 43451,
                   "src": "166:17:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -34271,7 +34272,7 @@ module.exports={
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 43415,
+                    "id": 43437,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "166:7:20",
@@ -34286,40 +34287,40 @@ module.exports={
               "src": "165:19:20"
             },
             "returnParameters": {
-              "id": 43418,
+              "id": 43440,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "192:0:20"
             },
-            "scope": 43450,
+            "scope": 43472,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 43441,
+            "id": 43463,
             "nodeType": "FunctionDefinition",
             "src": "266:86:20",
             "nodes": [],
             "body": {
-              "id": 43440,
+              "id": 43462,
               "nodeType": "Block",
               "src": "294:58:20",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
-                    "id": 43435,
+                    "id": 43457,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 43432,
+                      "id": 43454,
                       "name": "lastCaller",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 43414,
+                      "referencedDeclaration": 43436,
                       "src": "303:10:20",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -34330,7 +34331,7 @@ module.exports={
                     "operator": "=",
                     "rightHandSide": {
                       "expression": {
-                        "id": 43433,
+                        "id": 43455,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -34341,7 +34342,7 @@ module.exports={
                           "typeString": "msg"
                         }
                       },
-                      "id": 43434,
+                      "id": 43456,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -34361,13 +34362,13 @@ module.exports={
                       "typeString": "address"
                     }
                   },
-                  "id": 43436,
+                  "id": 43458,
                   "nodeType": "ExpressionStatement",
                   "src": "303:23:20"
                 },
                 {
                   "expression": {
-                    "id": 43438,
+                    "id": 43460,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -34377,11 +34378,11 @@ module.exports={
                     "prefix": false,
                     "src": "337:8:20",
                     "subExpression": {
-                      "id": 43437,
+                      "id": 43459,
                       "name": "number",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 43412,
+                      "referencedDeclaration": 43434,
                       "src": "337:6:20",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -34393,7 +34394,7 @@ module.exports={
                       "typeString": "uint256"
                     }
                   },
-                  "id": 43439,
+                  "id": 43461,
                   "nodeType": "ExpressionStatement",
                   "src": "337:8:20"
                 }
@@ -34406,48 +34407,48 @@ module.exports={
             "name": "increment",
             "nameLocation": "275:9:20",
             "parameters": {
-              "id": 43430,
+              "id": 43452,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "284:2:20"
             },
             "returnParameters": {
-              "id": 43431,
+              "id": 43453,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "294:0:20"
             },
-            "scope": 43450,
+            "scope": 43472,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 43449,
+            "id": 43471,
             "nodeType": "FunctionDefinition",
             "src": "357:88:20",
             "nodes": [],
             "body": {
-              "id": 43448,
+              "id": 43470,
               "nodeType": "Block",
               "src": "411:34:20",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
-                    "id": 43446,
+                    "id": 43468,
                     "name": "lastCaller",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 43414,
+                    "referencedDeclaration": 43436,
                     "src": "428:10:20",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 43445,
-                  "id": 43447,
+                  "functionReturnParameters": 43467,
+                  "id": 43469,
                   "nodeType": "Return",
                   "src": "421:17:20"
                 }
@@ -34460,23 +34461,23 @@ module.exports={
             "name": "getLastCaller",
             "nameLocation": "366:13:20",
             "parameters": {
-              "id": 43442,
+              "id": 43464,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "379:2:20"
             },
             "returnParameters": {
-              "id": 43445,
+              "id": 43467,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 43444,
+                  "id": 43466,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 43449,
+                  "scope": 43471,
                   "src": "402:7:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -34485,7 +34486,7 @@ module.exports={
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 43443,
+                    "id": 43465,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "402:7:20",
@@ -34500,7 +34501,7 @@ module.exports={
               ],
               "src": "401:9:20"
             },
-            "scope": 43450,
+            "scope": 43472,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
@@ -34513,13 +34514,12 @@ module.exports={
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          43450
+          43472
         ],
         "name": "Counter",
         "nameLocation": "74:7:20",
-        "scope": 43451,
-        "usedErrors": [],
-        "usedEvents": []
+        "scope": 43473,
+        "usedErrors": []
       }
     ],
     "license": "UNLICENSED"

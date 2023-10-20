@@ -51,6 +51,7 @@ async function callIncrement() {
     console.log('theContract2:', theContract);
 
     const txOptions = {gasPrice: await provider.getGasPrice()}
+    // const transaction = await theContract.increment()
     const transaction = await theContract.increment(txOptions)
     const hash = transaction.hash
     console.log(`Transaction ${hash} sent`)
