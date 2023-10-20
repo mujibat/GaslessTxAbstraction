@@ -5,7 +5,14 @@ const contractAbi = contractArtifact.abi
 
 let theContract
 let provider
-
+// let box1 = document.getElementById("box1")
+let count = 0
+function incrementCount() {
+    count++;
+    // Update the count display in the HTML
+    const countDisplay = document.getElementById('box1');
+    countDisplay.textContent = count;
+}
 async function initContract() {
 
     if (!window.ethereum) {
@@ -49,6 +56,7 @@ async function callIncrement() {
     console.log(`Transaction ${hash} sent`)
     const receipt = await transaction.wait()
     console.log(`Mined in block: ${receipt.blockNumber}`)
+    incrementCount();
 }
 
 async function getLastCaller() {
@@ -56,6 +64,8 @@ async function getLastCaller() {
 
     const txOptions = {gasPrice: await provider.getGasPrice()}
     const transaction = await theContract.getLastCaller(txOptions)
+    const callerAddressElement = document.getElementById('transaction');
+    callerAddressElement.textContent = `Last caller's address: ${transaction}`;
     console.log(`this is the last caller: ${transaction}`)
 }
 

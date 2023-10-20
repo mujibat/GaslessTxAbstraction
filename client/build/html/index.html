@@ -3,12 +3,12 @@
 
     <title>Abstraction Test</title>
 
-    <script src="bundle.js">
+    <script src="bundle.js"> 
     </script>
-
+    
 </head>
 <body>
-<h2>Abstraction</h2>
+<h2>Gasless Transaction DApp</h2>
 
 <script>
     window.app.initContract().then(function ({contractAddress, network}) {
@@ -17,16 +17,21 @@
         document.getElementById('capture_button').disabled = false
     })
 </script>
-
+<div>
+    <div>
+        <div id="box1">0</div>
+        
+    </div>
 <button id="capture_button" disabled onClick="window.app.callIncrement()">
-    Capture the flag
+    Increment
 </button>
 
 
-
+<div id="transaction"></div>
 <button id="getcaller_button" onClick="window.app.getLastCaller()">
-    Capture the flag
+    Last Caller
 </button>
+</div>
 
 <hr>
 <div id="logview"></div>
