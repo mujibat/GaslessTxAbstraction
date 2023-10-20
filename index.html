@@ -1,0 +1,41 @@
+<html>
+<head>
+
+    <title>Abstraction Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="bundle.js"> 
+    </script>
+    
+</head>
+<body>
+    <h2 class="header">Gasless Transaction DApp</h2>
+
+<script>
+    window.app.initContract().then(function ({contractAddress, network}) {
+        console.log('Abstraction contract', contractAddress)
+        // console.log(`identified network: ${JSON.stringify(network)}`)
+        document.getElementById('capture_button').disabled = false
+    })
+</script>
+<div class="container">
+    <div class="content">
+        <div id="box1">0</div>
+        
+    </div>
+<button id="capture_button" onClick="window.app.callIncrement()">
+    Increment
+</button>
+
+
+<div id="transaction"></div>
+<button id="getcaller_button" onClick="window.app.getLastCaller()">
+    Last Caller
+</button>
+</div>
+
+<hr>
+<div id="logview"></div>
+</body>
+</html>
